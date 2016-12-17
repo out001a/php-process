@@ -11,6 +11,9 @@ PHP多进程管理及单机消息队列。
 ## Usage
 
 ```php
+ // 消息队列对象
+ $mq = new MsgQueue(array('path' => 消息队列文件的绝对路径, 'proj' => 项目名));
+
  // 初始化，自定义一些参数
  Process::init(消息队列对象, 同时存在的最大子进程数, fork子进程的时间间隔);
  Process::register('dispatch', function() {
